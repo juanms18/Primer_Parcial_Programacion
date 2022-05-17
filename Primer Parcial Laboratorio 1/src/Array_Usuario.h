@@ -83,4 +83,11 @@ void bajaUsuario(Usuario * listaUsuario , int lenUsuaio);
 
 int printUsuariosActivos (Usuario *list, int len);
 
+int inicioMenuAdmin (Usuario * listaUsuario, int lenUsuario , Producto * listaProductos , int lenProducto, Tracking * listaTracking , int lenTracking , int idUsuario );
+
+void mostrarUnTracking2(int idTracking,  int idComprador , int estado , int idVendedor);
+
+
+
+
 #endif /* ARRAY_USUARIO_H_ */

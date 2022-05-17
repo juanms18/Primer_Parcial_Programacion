@@ -85,6 +85,9 @@ int altaTracking(Tracking * lista , int len, int idProducto , int idUsuario , in
 return retorno;
 }
 
+
+
+
 int buscarTrackigPorID(Tracking * listaTracking , int lenTracking)
 {
 	int retorno=-5;
@@ -194,7 +197,7 @@ void hardcodeoDatosTrack(Tracking * listaTracking , int lenTracking)
 }
 
 
-void verTrackingGlobal(Tracking * listaTracking , int lenTracking)
+/*void verTrackingGlobal(Tracking * listaTracking , int lenTracking)
 {
 	int i;
 	printf("|ID TRACKING|\t\t|ESTADO|\t\t|ID COMPRADOR|\t\t|ID VENDEDOR|\n");
@@ -202,4 +205,6 @@ void verTrackingGlobal(Tracking * listaTracking , int lenTracking)
 	{
 		printf("%d\t\t%d\t\t%d\t\t%d\n",listaTracking[i].idTracking , listaTracking[i].isEmpty , listaTracking[i].idComprador , listaTracking[i].idUsusario);
 	}
-}
+}*/
+
+

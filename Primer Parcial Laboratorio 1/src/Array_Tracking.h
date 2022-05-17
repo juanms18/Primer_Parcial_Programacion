@@ -44,6 +44,6 @@ void remplazoEstadoPorArray(int valor , char * array);
 
 void hardcodeoDatosTrack(Tracking * listaTracking , int lenTracking);
 
-void verTrackingGlobal(Tracking * listaTracking , int lenTracking);
+//void verTrackingGlobal(Tracking * listaTracking , int lenTracking);
 
 #endif /* ARRAY_TRACKING_H_ */

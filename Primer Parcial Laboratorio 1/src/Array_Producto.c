@@ -54,12 +54,12 @@ void hardcodeoProductos(Producto* listaProductos, int len)
    strcpy(listaProductos[0].nombreProducto , "CAFETERA");
    strcpy(listaProductos[1].nombreProducto , "LICUADORA");
    strcpy(listaProductos[2].nombreProducto , "NOKIA 1100");
-   strcpy(listaProductos[3].nombreProducto , "TV LED 40");
+   strcpy(listaProductos[3].nombreProducto , "CAFETERA");
    strcpy(listaProductos[4].nombreProducto , "BATIDORA");
    strcpy(listaProductos[5].nombreProducto , "TV LED 32");
    strcpy(listaProductos[6].nombreProducto , "SAMSUNG S22");
    strcpy(listaProductos[7].nombreProducto , "MONITOR 22");
-   strcpy(listaProductos[8].nombreProducto , "MOTO G 60");
+   strcpy(listaProductos[8].nombreProducto , "CAFETERA");
    strcpy(listaProductos[9].nombreProducto , "AURICULARES");
 
    listaProductos[0].precio = 2542.25 ;
@@ -114,12 +114,7 @@ int initProductos( Producto* listaProductos,int len)
 }
 
 
-void mostrarProducto(Producto listaProductos)
-{
-	char categoria [20];
-	remplazoCategoriaAStr(listaProductos.categoria, categoria);
-	printf("%d\t\t%s\t\t%.2f\t\t%s\t%d\n",listaProductos.idProducto  , listaProductos.nombreProducto, listaProductos.precio,categoria , listaProductos.stock);
-}
+
 
 int printPrductos(Producto *list, int len)
 {
@@ -351,6 +346,23 @@ int altaProducto(Producto * listaProducto , int lenProducto , int idDelUsiario)
 	}
 }
 
+int reponerStock(Producto * listaProducto , int lenProducto , int idDelUsuario)
+{
+	Producto auxProducto;
+	int retorno=0;
+	int index;
+	int cantidadAReponer;
+	int control;
+	printPrductosporUsuario(listaProducto, lenProducto, idDelUsuario);
+	index=buscarPorID(listaProducto, lenProducto);
+	control=getInt(&cantidadAReponer, "Ingrese la cantida de Stock que desa reponer", "ERROR!!Dato mal ingresado!!\n", 1, 10000, 3);
+	if(control==1)
+	{
+		listaProducto[index].stock = listaProducto[index].stock +  cantidadAReponer;
+		retorno = 1;
+	}
+return retorno;
+}
 
 Producto altaUnProducto(int * retorno)
 {
@@ -392,4 +404,83 @@ void bajaProducto(Producto * listaProducto , int lenProducto)
 		listaProducto[indice].isEmpty=BAJA;
 	}
 
+}
+
+int filtrarPorNombre(Producto * listaProducto, int lenProducto)
+{
+	char nombreIngresado[25];
+	int i;
+	int validarChar;
+	int retorno=0;
+
+	validarChar=getStringAlfanumerico("Ingrese el nombre del producto a buscar.\n", nombreIngresado, "ERROR!! Ingreso algun caracter desconocido!\n", "ERROR! Nombre demaciado largo.\n", 3, 25);
+
+	if(validarChar==1)
+	{
+		ordenarPorStock(listaProducto, lenProducto);
+		convertirEnMayuscula(nombreIngresado, 25);
+		printf("| ID |\t\t| NOMBRE |\t\t| PRECIO |\t\t| STOCK DISPONIBLE|\n");
+		for(i=0 ; i<lenProducto ; i++)
+		{
+			if(strcmp(listaProducto[i].nombreProducto , nombreIngresado)==0 )
+			{
+				mostrarProducto(listaProducto[i]);
+				retorno=1;
+
+			}
+		}
+	}
+	system("pause");
+	return retorno;
+}
+
+void mostrarProducto(Producto listaProductos)
+{
+	char categoria [20];
+	remplazoCategoriaAStr(listaProductos.categoria, categoria);
+	printf("%d\t\t%s\t\t%.2f\t\t%s\t%d\n",listaProductos.idProducto  , listaProductos.nombreProducto, listaProductos.precio,categoria , listaProductos.stock);
+}
+
+void ordenarPorStock(Producto *list, int len)
+{
+	int j;
+	int estaOrdenado;
+	int i;
+	if (list != NULL && len > 0){
+		do
+		{
+			estaOrdenado=0;
+			j=0;
+			for(i=0; i<len; i++)
+			{
+				if(list[i].isEmpty==FULL)
+				{
+					for(j=i+1; j<len; j++)
+					{
+						if(list[j].isEmpty==FULL)
+						{
+
+							if(list[i].stock < list[j].stock)
+							{
+								estaOrdenado=1;
+								remplazaOrden(list, i, j);
+								break;
+							}
+							else
+							{
+								if(list[i].stock < list[j].stock)
+								{
+									estaOrdenado=1;
+									remplazaOrden(list, i, j);
+									break;
+								}
+							}
+
+						}
+					}
+				}
+			}
+			len--;
+		}while (estaOrdenado==1);
+	}
 }

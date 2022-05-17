@@ -84,10 +84,11 @@ int menuAdmin(int * opcionIngresada)
 	puts("2) LISTAR TODOS LOS PRODUCTOS POR CATEGORIA");
 	puts("3) BAJA DE UN PRODUCTO");
 	puts("4) BAJA DE UN USUARIO");
-	puts("5) VER TRACKING GLOBAL\n");
+	puts("5) VER TRACKING GLOBAL");
+	puts("6) FILTRAR POR NOMBRE DE PRODUCTO\n");
 	puts("0) SALIR\n");
 
-	leerOpcion = getInt(&datoIngresado, "Ingrese  una opcion del menu.\n",	"Cuidado!! --> La opcion ingresada no es valida!!\n", 0, 5, 3);
+	leerOpcion = getInt(&datoIngresado, "Ingrese  una opcion del menu.\n",	"Cuidado!! --> La opcion ingresada no es valida!!\n", 0, 6, 3);
 
 	if(leerOpcion==0)
 	{

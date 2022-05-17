@@ -44,6 +44,8 @@ int printPrductos(Producto *list, int len);
 
 void ordenarPorCategoria(Producto *list, int len);
 
+void ordenarPorStock(Producto *list, int len);
+
 void remplazaOrden(Producto* list , int posicionA , int posicionB);
 
 void remplazoCategoriaAStr(int valor , char * array);
@@ -55,5 +57,7 @@ int BuscarPrimerEspacioLibreProducto (Producto *list,int len);
 int altaProducto(Producto * listaProducto , int lenProducto , int idDelUsiario);
 
 Producto altaUnProducto(int * retorno);
+
+int reponerStock(Producto * listaProducto , int lenProducto , int idDelUsuario);
 
 #endif /* ARRAY_PODUCTO_H_ */

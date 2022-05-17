@@ -1,12 +1,6 @@
-18:27:55 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+20:36:46 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Tracking.o" "..\\src\\Array_Tracking.c" 
-..\src\Array_Tracking.c: In function 'buscarTrackigPorID':
-..\src\Array_Tracking.c:95:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
-   95 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",1, 10000, 3);
-      |   ^~~~~~
-      |   getenv
 gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
 
-18:27:56 Build Finished. 0 errors, 1 warnings. (took 479ms)
+20:36:46 Build Finished. 0 errors, 0 warnings. (took 274ms)
 

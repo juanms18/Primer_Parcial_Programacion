@@ -17086,3 +17086,2197 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Tracking.o" "..\\src\\Arr
       |   ^~~~~~
       |   getenv
 gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+18:58:50 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Tracking.o" "..\\src\\Array_Tracking.c" 
+..\src\Array_Tracking.c: In function 'buscarTrackigPorID':
+..\src\Array_Tracking.c:98:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+   98 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",1, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:368:134: warning: unknown escape sequence: '\N'
+  368 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:392:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  392 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:675:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  675 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:627:1: warning: control reaches end of non-void function [-Wreturn-type]
+  627 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:690:1: warning: control reaches end of non-void function [-Wreturn-type]
+  690 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:359:6: warning: unused variable 'validacion' [-Wunused-variable]
+  359 |  int validacion;
+      |      ^~~~~~~~~~
+..\src\Array_Producto.c:358:6: warning: variable 'index' set but not used [-Wunused-but-set-variable]
+  358 |  int index;
+      |      ^~~~~
+..\src\Array_Producto.c:357:6: warning: unused variable 'retorno' [-Wunused-variable]
+  357 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:365:1: warning: control reaches end of non-void function [-Wreturn-type]
+  365 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:12:10 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:361:6: error: redefinition of 'retorno'
+  361 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c:357:6: note: previous definition of 'retorno' was here
+  357 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c:362:67: error: expected ';' before 'index'
+  362 |  printPrductosporUsuario(listaProducto, lenProducto, idDelUsuario)
+      |                                                                   ^
+      |                                                                   ;
+  363 |  index=buscarPorID(listaProducto, lenProducto);
+      |  ~~~~~                                                             
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  381 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:382:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  382 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+19:12:34 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Primer Parcial Laboratorio 1.o" "..\\src\\Primer Parcial Laboratorio 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:361:67: error: expected ';' before 'index'
+  361 |  printPrductosporUsuario(listaProducto, lenProducto, idDelUsuario)
+      |                                                                   ^
+      |                                                                   ;
+  362 |  index=buscarPorID(listaProducto, lenProducto);
+      |  ~~~~~                                                             
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+19:12:48 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:368:134: warning: unknown escape sequence: '\N'
+  368 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:392:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  392 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:675:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  675 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:627:1: warning: control reaches end of non-void function [-Wreturn-type]
+  627 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:690:1: warning: control reaches end of non-void function [-Wreturn-type]
+  690 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:13:26 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:368:134: warning: unknown escape sequence: '\N'
+  368 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:392:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  392 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:675:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  675 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:627:1: warning: control reaches end of non-void function [-Wreturn-type]
+  627 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:690:1: warning: control reaches end of non-void function [-Wreturn-type]
+  690 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:23:51 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:362:134: warning: unknown escape sequence: '\N'
+  362 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'subMenuVender':
+..\src\Array_Usuario.c:384:21: warning: passing argument 1 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+  384 |  validarGet1=getInt(opcion1, "Seleccione la opcion deseada!\n1)VENDER NUEVO PRODUCTO.\n2)REPONER STOCK DE UN PRODUCTO", "ERROR!!! Dato mal ingresado! ", 1,2, 3);
+      |                     ^~~~~~~
+      |                     |
+      |                     int
+In file included from ..\src\Array_Usuario.h:10,
+                 from ..\src\Array_Usuario.c:10:
+..\src\Input.h:23:17: note: expected 'int *' but argument is of type 'int'
+   23 | int getInt(int *pResultado, char mensaje[], char mensajeError[], int minimo, int maximo, int reintentos);
+      |            ~~~~~^~~~~~~~~~
+..\src\Array_Usuario.c:387:16: error: expected expression before ')' token
+  387 |   if(opcion1=1=)
+      |                ^
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:406:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  406 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:689:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  689 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:641:1: warning: control reaches end of non-void function [-Wreturn-type]
+  641 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:704:1: warning: control reaches end of non-void function [-Wreturn-type]
+  704 | }
+      | ^
+19:24:02 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:362:134: warning: unknown escape sequence: '\N'
+  362 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'subMenuVender':
+..\src\Array_Usuario.c:384:21: warning: passing argument 1 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+  384 |  validarGet1=getInt(opcion1, "Seleccione la opcion deseada!\n1)VENDER NUEVO PRODUCTO.\n2)REPONER STOCK DE UN PRODUCTO", "ERROR!!! Dato mal ingresado! ", 1,2, 3);
+      |                     ^~~~~~~
+      |                     |
+      |                     int
+In file included from ..\src\Array_Usuario.h:10,
+                 from ..\src\Array_Usuario.c:10:
+..\src\Input.h:23:17: note: expected 'int *' but argument is of type 'int'
+   23 | int getInt(int *pResultado, char mensaje[], char mensajeError[], int minimo, int maximo, int reintentos);
+      |            ~~~~~^~~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:406:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  406 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:689:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  689 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:641:1: warning: control reaches end of non-void function [-Wreturn-type]
+  641 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:704:1: warning: control reaches end of non-void function [-Wreturn-type]
+  704 | }
+      | ^
+..\src\Array_Usuario.c: In function 'subMenuVender':
+..\src\Array_Usuario.c:384:14: warning: 'opcion1' is used uninitialized in this function [-Wuninitialized]
+  384 |  validarGet1=getInt(opcion1, "Seleccione la opcion deseada!\n1)VENDER NUEVO PRODUCTO.\n2)REPONER STOCK DE UN PRODUCTO", "ERROR!!! Dato mal ingresado! ", 1,2, 3);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Primer Parcial Laboratorio 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+19:24:05 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:25:08 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'subMenuVender':
+..\src\Array_Usuario.c:383:21: warning: passing argument 1 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+  383 |  validarGet1=getInt(opcion1, "Seleccione la opcion deseada!\n1)VENDER NUEVO PRODUCTO.\n2)REPONER STOCK DE UN PRODUCTO", "ERROR!!! Dato mal ingresado! ", 1,2, 3);
+      |                     ^~~~~~~
+      |                     |
+      |                     int
+In file included from ..\src\Array_Usuario.h:10,
+                 from ..\src\Array_Usuario.c:10:
+..\src\Input.h:23:17: note: expected 'int *' but argument is of type 'int'
+   23 | int getInt(int *pResultado, char mensaje[], char mensajeError[], int minimo, int maximo, int reintentos);
+      |            ~~~~~^~~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:703:1: warning: control reaches end of non-void function [-Wreturn-type]
+  703 | }
+      | ^
+..\src\Array_Usuario.c: In function 'subMenuVender':
+..\src\Array_Usuario.c:383:14: warning: 'opcion1' is used uninitialized in this function [-Wuninitialized]
+  383 |  validarGet1=getInt(opcion1, "Seleccione la opcion deseada!\n1)VENDER NUEVO PRODUCTO.\n2)REPONER STOCK DE UN PRODUCTO", "ERROR!!! Dato mal ingresado! ", 1,2, 3);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+Info: Nothing to build for Primer Parcial Laboratorio 1
+19:26:05 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:703:1: warning: control reaches end of non-void function [-Wreturn-type]
+  703 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:45:44 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:707:1: warning: control reaches end of non-void function [-Wreturn-type]
+  707 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Primer Parcial Laboratorio 1.o" "..\\src\\Primer Parcial Laboratorio 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:419:70: error: 'input' undeclared (first use in this function); did you mean 'int'?
+  419 |  getStringAlfanumerico("Ingrese el nombre del producto a buscar.\n", input, mensajeError, mensajeErrorLen, reintentos, len);
+      |                                                                      ^~~~~
+      |                                                                      int
+..\src\Array_Producto.c:419:70: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Array_Producto.c:419:77: error: 'mensajeError' undeclared (first use in this function)
+  419 |  getStringAlfanumerico("Ingrese el nombre del producto a buscar.\n", input, mensajeError, mensajeErrorLen, reintentos, len);
+      |                                                                             ^~~~~~~~~~~~
+..\src\Array_Producto.c:419:91: error: 'mensajeErrorLen' undeclared (first use in this function)
+  419 |  getStringAlfanumerico("Ingrese el nombre del producto a buscar.\n", input, mensajeError, mensajeErrorLen, reintentos, len);
+      |                                                                                           ^~~~~~~~~~~~~~~
+..\src\Array_Producto.c:419:108: error: 'reintentos' undeclared (first use in this function)
+  419 |  getStringAlfanumerico("Ingrese el nombre del producto a buscar.\n", input, mensajeError, mensajeErrorLen, reintentos, len);
+      |                                                                                                            ^~~~~~~~~~
+..\src\Array_Producto.c:419:120: error: 'len' undeclared (first use in this function); did you mean 'mblen'?
+  419 |  getStringAlfanumerico("Ingrese el nombre del producto a buscar.\n", input, mensajeError, mensajeErrorLen, reintentos, len);
+      |                                                                                                                        ^~~
+      |                                                                                                                        mblen
+..\src\Array_Producto.c:420:2: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  420 |  convertirEnMayuscula(nombreIngresado, 25);
+      |  ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:426:20: error: incompatible type for argument 1 of 'mostrarProducto'
+  426 |    mostrarProducto(listaProducto);
+      |                    ^~~~~~~~~~~~~
+      |                    |
+      |                    Producto * {aka struct <anonymous> *}
+..\src\Array_Producto.c:117:31: note: expected 'Producto' {aka 'struct <anonymous>'} but argument is of type 'Producto *' {aka 'struct <anonymous> *'}
+  117 | void mostrarProducto(Producto listaProductos)
+      |                      ~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:430:1: warning: control reaches end of non-void function [-Wreturn-type]
+  430 | }
+      | ^
+19:48:53 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenuOpciones.o" "..\\src\\MenuOpciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:425:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  425 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:431:21: error: incompatible type for argument 1 of 'mostrarProducto'
+  431 |     mostrarProducto(listaProducto);
+      |                     ^~~~~~~~~~~~~
+      |                     |
+      |                     Producto * {aka struct <anonymous> *}
+..\src\Array_Producto.c:117:31: note: expected 'Producto' {aka 'struct <anonymous>'} but argument is of type 'Producto *' {aka 'struct <anonymous> *'}
+  117 | void mostrarProducto(Producto listaProductos)
+      |                      ~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+19:49:56 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:425:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  425 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:431:21: error: incompatible type for argument 1 of 'mostrarProducto'
+  431 |     mostrarProducto(listaProducto);
+      |                     ^~~~~~~~~~~~~
+      |                     |
+      |                     Producto * {aka struct <anonymous> *}
+..\src\Array_Producto.c:117:31: note: expected 'Producto' {aka 'struct <anonymous>'} but argument is of type 'Producto *' {aka 'struct <anonymous> *'}
+  117 | void mostrarProducto(Producto listaProductos)
+      |                      ~~~~~~~~~^~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+19:51:22 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:425:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  425 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Primer Parcial Laboratorio 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+19:51:25 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+Info: Nothing to build for Primer Parcial Laboratorio 1
+19:51:38 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:707:1: warning: control reaches end of non-void function [-Wreturn-type]
+  707 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:52:01 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:707:1: warning: control reaches end of non-void function [-Wreturn-type]
+  707 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:54:25 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:704:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  704 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:707:1: warning: control reaches end of non-void function [-Wreturn-type]
+  707 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MenuOpciones.o" "..\\src\\MenuOpciones.c" 
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Primer Parcial Laboratorio 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+19:54:26 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:55:27 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:425:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  425 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+19:57:22 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:425:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  425 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:426:15: error: expected ';' before 'for'
+  426 |   printf("ID")
+      |               ^
+      |               ;
+  427 |   for(i=0 ; i<lenProducto ; i++)
+      |   ~~~          
+..\src\Array_Producto.c:417:6: warning: unused variable 'i' [-Wunused-variable]
+  417 |  int i;
+      |      ^
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+19:57:25 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:425:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  425 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:426:15: error: expected ';' before 'for'
+  426 |   printf("ID")
+      |               ^
+      |               ;
+  427 |   for(i=0 ; i<lenProducto ; i++)
+      |   ~~~          
+..\src\Array_Producto.c:417:6: warning: unused variable 'i' [-Wunused-variable]
+  417 |  int i;
+      |      ^
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+19:57:46 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:287:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  287 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:333:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  333 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:356:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  356 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:380:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  380 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:381:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  381 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:425:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  425 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:352:1: warning: control reaches end of non-void function [-Wreturn-type]
+  352 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:00:03 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:420:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  420 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Primer Parcial Laboratorio 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:00:05 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+Info: Nothing to build for Primer Parcial Laboratorio 1
+20:01:51 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:420:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  420 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:02:34 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:420:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  420 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Primer Parcial Laboratorio 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:02:35 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:03:09 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:421:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  421 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:04:17 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:421:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  421 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:427:1: error: unknown type name 'no'
+  427 | no    mostrarProducto(listaProducto[i]);
+      | ^~
+..\src\Array_Producto.c:427:23: error: expected declaration specifiers or '...' before 'listaProducto'
+  427 | no    mostrarProducto(listaProducto[i]);
+      |                       ^~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+20:04:18 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:421:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  421 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:427:1: error: unknown type name 'no'
+  427 | no    mostrarProducto(listaProducto[i]);
+      | ^~
+..\src\Array_Producto.c:427:23: error: expected declaration specifiers or '...' before 'listaProducto'
+  427 | no    mostrarProducto(listaProducto[i]);
+      |                       ^~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+20:04:35 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:421:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  421 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:07:28 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:45:15: warning: implicit declaration of function 'inicioMenuAdmin' [-Wimplicit-function-declaration]
+   45 |               inicioMenuAdmin(eUsuario, len, listProducto, lenProducto, listaTracking, lenTracking);
+      |               ^~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:421:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  421 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:08:16 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:421:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  421 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:18:04 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idDelUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:92: error: 'idDelUsuario' undeclared (first use in this function); did you mean 'idUsuario'?
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idDelUsuario);
+      |                                                                                            ^~~~~~~~~~~~
+      |                                                                                            idUsuario
+..\src\Array_Usuario.c:700:92: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idDelUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:780:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  780 |    if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |    ^~
+..\src\Array_Usuario.c:781:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  781 |    {
+      |    ^
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+20:21:15 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Producto.o" "..\\src\\Array_Producto.c" 
+..\src\Array_Producto.c: In function 'buscarPorID':
+..\src\Array_Producto.c:282:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+  282 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:328:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  328 |  int retorno=0;
+      |      ^~~~~~~
+..\src\Array_Producto.c: In function 'reponerStock':
+..\src\Array_Producto.c:351:11: warning: unused variable 'auxProducto' [-Wunused-variable]
+  351 |  Producto auxProducto;
+      |           ^~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaUnProducto':
+..\src\Array_Producto.c:375:13: warning: implicit declaration of function 'getStringAlfanumerico' [-Wimplicit-function-declaration]
+  375 |  control2 = getStringAlfanumerico("Ingrese nombre del producto.\n", auxProducto.nombreProducto, "ERROR! Caracter desconocido!\n", "ERROR! Nombre muy largo!\n", 3, 25);
+      |             ^~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c:376:13: warning: implicit declaration of function 'getStringNumerosFlotantes' [-Wimplicit-function-declaration]
+  376 |  control3 = getStringNumerosFlotantes("Ingrese el precio del paroducto.\n", "ERROR! Precio desconocido!",&auxProducto.precio , 3);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'filtrarPorNombre':
+..\src\Array_Producto.c:421:3: warning: implicit declaration of function 'convertirEnMayuscula' [-Wimplicit-function-declaration]
+  421 |   convertirEnMayuscula(nombreIngresado, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~
+..\src\Array_Producto.c: In function 'altaProducto':
+..\src\Array_Producto.c:347:1: warning: control reaches end of non-void function [-Wreturn-type]
+  347 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Tracking.o" "..\\src\\Array_Tracking.c" 
+..\src\Array_Tracking.c: In function 'buscarTrackigPorID':
+..\src\Array_Tracking.c:98:3: warning: implicit declaration of function 'getInt'; did you mean 'getenv'? [-Wimplicit-function-declaration]
+   98 |   getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",1, 10000, 3);
+      |   ^~~~~~
+      |   getenv
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:780:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  780 |    if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |    ^~
+..\src\Array_Usuario.c:781:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  781 |    {
+      |    ^
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Primer Parcial Laboratorio 1.o" "..\\src\\Primer Parcial Laboratorio 1.c" 
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Primer Parcial Laboratorio 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:21:19 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+Info: Nothing to build for Primer Parcial Laboratorio 1
+20:27:55 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Primer Parcial Laboratorio 1.o" "..\\src\\Primer Parcial Laboratorio 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |    if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |    ^~
+..\src\Array_Usuario.c:779:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |    {
+      |    ^
+..\src\Array_Usuario.c:780:95: warning: passing argument 2 of 'mostrarUnTracking' makes pointer from integer without a cast [-Wint-conversion]
+  780 |     mostrarUnTracking(listaTracking[indiceTracking].idTracking , listaTracking[indiceTracking].idComprador, listaTracking[indiceTracking].isEmpty,listaTracking[indiceTracking].idUsusario );
+      |                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\src\Array_Usuario.c:585:46: note: expected 'char *' but argument is of type 'int'
+  585 | void mostrarUnTracking(int idTracking,  char nombreProducto[] , int estado)
+      |                                         ~~~~~^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:780:5: error: too many arguments to function 'mostrarUnTracking'
+  780 |     mostrarUnTracking(listaTracking[indiceTracking].idTracking , listaTracking[indiceTracking].idComprador, listaTracking[indiceTracking].isEmpty,listaTracking[indiceTracking].idUsusario );
+      |     ^~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:585:6: note: declared here
+  585 | void mostrarUnTracking(int idTracking,  char nombreProducto[] , int estado)
+      |      ^~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:786:1: error: expected identifier or '(' before '}' token
+  786 | }
+      | ^
+..\src\Array_Usuario.c:788:6: error: conflicting types for 'mostrarUnTracking2'
+  788 | void mostrarUnTracking2(int idTracking,  int idComprador , int estado , int idVendedor)
+      |      ^~~~~~~~~~~~~~~~~~
+In file included from ..\src\Array_Usuario.c:10:
+..\src\Array_Usuario.h:88:6: note: previous declaration of 'mostrarUnTracking2' was here
+   88 | void mostrarUnTracking2(int idTracking,  char nombreProducto[] , int estado);
+      |      ^~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'mostrarUnTracking2':
+..\src\Array_Usuario.c:794:48: error: 'nombreProducto' undeclared (first use in this function); did you mean 'mostrarProducto'?
+  794 |    printf("%d\t\t\t%d\t\t%d\t\%dn",idTracking ,nombreProducto , charFinal);
+      |                                                ^~~~~~~~~~~~~~
+      |                                                mostrarProducto
+..\src\Array_Usuario.c:794:48: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+20:28:21 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Primer Parcial Laboratorio 1.o" "..\\src\\Primer Parcial Laboratorio 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |    if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |    ^~
+..\src\Array_Usuario.c:779:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |    {
+      |    ^
+..\src\Array_Usuario.c:780:95: warning: passing argument 2 of 'mostrarUnTracking' makes pointer from integer without a cast [-Wint-conversion]
+  780 |     mostrarUnTracking(listaTracking[indiceTracking].idTracking , listaTracking[indiceTracking].idComprador, listaTracking[indiceTracking].isEmpty,listaTracking[indiceTracking].idUsusario );
+      |                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               int
+..\src\Array_Usuario.c:585:46: note: expected 'char *' but argument is of type 'int'
+  585 | void mostrarUnTracking(int idTracking,  char nombreProducto[] , int estado)
+      |                                         ~~~~~^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:780:5: error: too many arguments to function 'mostrarUnTracking'
+  780 |     mostrarUnTracking(listaTracking[indiceTracking].idTracking , listaTracking[indiceTracking].idComprador, listaTracking[indiceTracking].isEmpty,listaTracking[indiceTracking].idUsusario );
+      |     ^~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:585:6: note: declared here
+  585 | void mostrarUnTracking(int idTracking,  char nombreProducto[] , int estado)
+      |      ^~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:786:1: error: expected identifier or '(' before '}' token
+  786 | }
+      | ^
+..\src\Array_Usuario.c: In function 'mostrarUnTracking2':
+..\src\Array_Usuario.c:794:48: error: 'nombreProducto' undeclared (first use in this function); did you mean 'mostrarProducto'?
+  794 |    printf("%d\t\t\t%d\t\t%d\t\%dn",idTracking ,nombreProducto , charFinal);
+      |                                                ^~~~~~~~~~~~~~
+      |                                                mostrarProducto
+..\src\Array_Usuario.c:794:48: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+20:28:33 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:780:94: warning: passing argument 2 of 'mostrarUnTracking' makes pointer from integer without a cast [-Wint-conversion]
+  780 |    mostrarUnTracking(listaTracking[indiceTracking].idTracking , listaTracking[indiceTracking].idComprador, listaTracking[indiceTracking].isEmpty,listaTracking[indiceTracking].idUsusario );
+      |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+      |                                                                                              |
+      |                                                                                              int
+..\src\Array_Usuario.c:585:46: note: expected 'char *' but argument is of type 'int'
+  585 | void mostrarUnTracking(int idTracking,  char nombreProducto[] , int estado)
+      |                                         ~~~~~^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:780:4: error: too many arguments to function 'mostrarUnTracking'
+  780 |    mostrarUnTracking(listaTracking[indiceTracking].idTracking , listaTracking[indiceTracking].idComprador, listaTracking[indiceTracking].isEmpty,listaTracking[indiceTracking].idUsusario );
+      |    ^~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:585:6: note: declared here
+  585 | void mostrarUnTracking(int idTracking,  char nombreProducto[] , int estado)
+      |      ^~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'mostrarUnTracking2':
+..\src\Array_Usuario.c:793:48: error: 'nombreProducto' undeclared (first use in this function); did you mean 'mostrarProducto'?
+  793 |    printf("%d\t\t\t%d\t\t%d\t\%dn",idTracking ,nombreProducto , charFinal);
+      |                                                ^~~~~~~~~~~~~~
+      |                                                mostrarProducto
+..\src\Array_Usuario.c:793:48: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+20:28:57 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'mostrarUnTracking2':
+..\src\Array_Usuario.c:793:48: error: 'nombreProducto' undeclared (first use in this function); did you mean 'mostrarProducto'?
+  793 |    printf("%d\t\t\t%d\t\t%d\t\%dn",idTracking ,nombreProducto , charFinal);
+      |                                                ^~~~~~~~~~~~~~
+      |                                                mostrarProducto
+..\src\Array_Usuario.c:793:48: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+20:29:49 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'mostrarUnTracking2':
+..\src\Array_Usuario.c:793:48: error: expected expression before 'int'
+  793 |    printf("%d\t\t\t%d\t\t%d\t\%dn",idTracking ,int idCoprador , charFinal);
+      |                                                ^~~
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+20:30:08 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'mostrarUnTracking2':
+..\src\Array_Usuario.c:793:27: warning: format '%d' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+  793 |    printf("%d\t\t\t%d\t\t%d\t\%dn",idTracking , idComprador , charFinal , idVendedor);
+      |                          ~^                                   ~~~~~~~~~
+      |                           |                                   |
+      |                           int                                 char *
+      |                          %s
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:30:34 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'mostrarUnTracking2':
+..\src\Array_Usuario.c:793:27: warning: format '%d' expects argument of type 'int', but argument 4 has type 'char *' [-Wformat=]
+  793 |    printf("%d\t\t\t%d\t\t%d\t\%d\n",idTracking , idComprador , charFinal , idVendedor);
+      |                          ~^                                    ~~~~~~~~~
+      |                           |                                    |
+      |                           int                                  char *
+      |                          %s
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:31:26 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty != EMPTY);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:32:58 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:44: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  778 |   if(listaTracking[indiceTracking].isEmpty == ENTREGADO & listaTracking[indiceTracking].isEmpty == CANCELADO && listaTracking[indiceTracking].isEmpty == ENVIAJE);
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty == ENTREGADO & listaTracking[indiceTracking].isEmpty == CANCELADO && listaTracking[indiceTracking].isEmpty == ENVIAJE);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:35:26 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Array_Usuario.o" "..\\src\\Array_Usuario.c" 
+..\src\Array_Usuario.c: In function 'ingresarComoUsuarioOAdmin':
+..\src\Array_Usuario.c:29:6: warning: unused variable 'opcionAdmin' [-Wunused-variable]
+   29 |  int opcionAdmin;
+      |      ^~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'lecturaMenuUsuario':
+..\src\Array_Usuario.c:352:5: warning: implicit declaration of function 'subMenuVender' [-Wimplicit-function-declaration]
+  352 |     subMenuVender(list, len, idDelUsu, listaUsuarios, lenUsuarios, listaTracking, lenTracking);
+      |     ^~~~~~~~~~~~~
+..\src\Array_Usuario.c:361:134: warning: unknown escape sequence: '\N'
+  361 |                     getInt(&resultado, "Seleccione opcion deseada.\n\n1)LISTADO DE VENTAS FINALIZADAS.\n2)VER PRODUCTOS EN STOCK\n", "ERROR!!\N", 1,2, 3);
+      |                                                                                                                                      ^~~~~~~~~~~
+..\src\Array_Usuario.c:337:6: warning: unused variable 'opcionMenu' [-Wunused-variable]
+  337 |  int opcionMenu;
+      |      ^~~~~~~~~~
+..\src\Array_Usuario.c:336:6: warning: unused variable 'repoStock' [-Wunused-variable]
+  336 |  int repoStock;
+      |      ^~~~~~~~~
+..\src\Array_Usuario.c: In function 'comprar':
+..\src\Array_Usuario.c:405:2: warning: implicit declaration of function 'printPrductosPorCategoria'; did you mean 'printPrductosporUsuario'? [-Wimplicit-function-declaration]
+  405 |  printPrductosPorCategoria(listaProductos, lenProductos);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  printPrductosporUsuario
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:688:4: warning: implicit declaration of function 'bajaProducto'; did you mean 'altaProducto'? [-Wimplicit-function-declaration]
+  688 |    bajaProducto(listaProductos, lenProducto);
+      |    ^~~~~~~~~~~~
+      |    altaProducto
+..\src\Array_Usuario.c:700:11: warning: implicit declaration of function 'listadoDeTrackingGlobal' [-Wimplicit-function-declaration]
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:705:11: warning: implicit declaration of function 'filtrarPorNombre' [-Wimplicit-function-declaration]
+  705 |           filtrarPorNombre(listaProductos, lenProducto);
+      |           ^~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: At top level:
+..\src\Array_Usuario.c:771:6: warning: conflicting types for 'listadoDeTrackingGlobal'
+  771 | void listadoDeTrackingGlobal(Tracking * listaTracking , int lenTracking, Producto * listaProducto, int lenProducto , int idDelUsuario)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c:700:11: note: previous implicit declaration of 'listadoDeTrackingGlobal' was here
+  700 |           listadoDeTrackingGlobal(listaTracking, lenTracking, listaProductos, lenProducto, idUsuario);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'listadoDeTrackingGlobal':
+..\src\Array_Usuario.c:778:44: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+  778 |   if(listaTracking[indiceTracking].isEmpty == ENTREGADO & listaTracking[indiceTracking].isEmpty == CANCELADO && listaTracking[indiceTracking].isEmpty == ENVIAJE);
+..\src\Array_Usuario.c:778:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  778 |   if(listaTracking[indiceTracking].isEmpty == ENTREGADO & listaTracking[indiceTracking].isEmpty == CANCELADO && listaTracking[indiceTracking].isEmpty == ENVIAJE);
+      |   ^~
+..\src\Array_Usuario.c:779:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  779 |   {
+      |   ^
+..\src\Array_Usuario.c:773:6: warning: unused variable 'indiceProducto' [-Wunused-variable]
+  773 |  int indiceProducto;
+      |      ^~~~~~~~~~~~~~
+..\src\Array_Usuario.c: In function 'estadoDeVentas':
+..\src\Array_Usuario.c:640:1: warning: control reaches end of non-void function [-Wreturn-type]
+  640 | }
+      | ^
+..\src\Array_Usuario.c: In function 'inicioMenuAdmin':
+..\src\Array_Usuario.c:709:1: warning: control reaches end of non-void function [-Wreturn-type]
+  709 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Primer Parcial Laboratorio 1.o" "..\\src\\Primer Parcial Laboratorio 1.c" 
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+20:36:44 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Primer Parcial Laboratorio 1.o" "..\\src\\Primer Parcial Laboratorio 1.c" 
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Primer Parcial Laboratorio 1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:36:46 **** Incremental Build of configuration Debug for project Primer Parcial Laboratorio 1 ****
+Info: Internal Builder is used for build
+gcc -o "Primer Parcial Laboratorio 1.exe" "src\\Array_Producto.o" "src\\Array_Tracking.o" "src\\Array_Usuario.o" "src\\Input.o" "src\\MenuOpciones.o" "src\\Primer Parcial Laboratorio 1.o" 

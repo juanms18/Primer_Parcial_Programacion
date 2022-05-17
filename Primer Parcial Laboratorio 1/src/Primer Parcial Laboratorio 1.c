@@ -20,7 +20,7 @@
 #include "Array_Usuario.h"
 #define CANTIDADDEUSUARIOS 1000
 #define CANTIDADDEPRODUCTOS 1000
-#define CANTIDADDETRACKING 1000
+#define CANTIDADDETRACKING 5
 
 int main(void) {
 	setbuf (stdout, NULL);
