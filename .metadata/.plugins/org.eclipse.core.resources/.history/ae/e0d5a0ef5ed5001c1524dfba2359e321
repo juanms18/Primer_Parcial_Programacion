@@ -1,0 +1,42 @@
+/*
+ * Array_Tracking.h
+ *
+ *  Created on: 14 may. 2022
+ *      Author: Juan
+ */
+
+
+
+#ifndef ARRAY_TRACKING_H_
+#define ARRAY_TRACKING_H_
+
+
+
+#include "Input.h"
+#include "MenuOpciones.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <string.h>
+
+#define FULL 1
+#define EMPTY 0
+#define BAJA 2
+
+typedef struct{
+	int idTracking;
+	int idPoducto;
+	short int isEmpty;
+	int cantidad;
+	int distanciaKM;
+	long int horaLlegada;
+}Tracking;
+
+int initTracking( Tracking *  lista,int len);
+
+int BuscarPrimerEspacioLibreTracking (Tracking * list,int len);
+
+int calculoKM(Usuario * listaUsuario , int lenUsuario , Producto * listaProducto , int lenProducto , Tracking * listaTracking , int lenTracking , int indiceUsuario);
+
+#endif /* ARRAY_TRACKING_H_ */

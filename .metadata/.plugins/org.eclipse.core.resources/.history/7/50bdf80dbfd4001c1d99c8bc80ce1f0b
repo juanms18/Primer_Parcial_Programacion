@@ -1,0 +1,50 @@
+/*
+ ============================================================================
+ Name        : Primer.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <string.h>
+#include "Array_Usuario.h"
+#include "Input.h"
+#include "MenuOpciones.h"
+
+
+
+
+int main(void) {
+	setbuf (stdout, NULL);
+
+	int opcionMenuIngreso;
+
+
+
+	if(menuIngreso(&opcionMenuIngreso)==1)
+	{
+      if(opcionMenuIngreso==1)
+      {
+    	  ingresarComoUsuarioOAdmin(Usuario * eUsuario , int len);
+      }
+      if(opcionMenuIngreso==2)
+      {
+    	  //registar usuario nuevo
+      }
+      if(opcionMenuIngreso==0)
+      {
+    	  return EXIT_SUCCESS;
+      }
+
+	}
+
+
+
+	return EXIT_SUCCESS;
+
+}

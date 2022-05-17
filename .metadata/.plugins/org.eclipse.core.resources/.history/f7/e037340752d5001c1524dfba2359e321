@@ -1,0 +1,73 @@
+/*
+ * Array_Tracking.c
+ *
+ *  Created on: 14 may. 2022
+ *      Author: Juan
+ *
+ */
+
+#include "Array_Tracking.h"
+
+
+
+int initTracking( Tracking *  lista,int len)
+{
+   	int retorno = -1;
+    int i;
+
+   	if(lista != NULL && len > 0)
+   	{
+   	 retorno=0;
+	 for ( i = 0; i < len; i++)
+	    {
+	     lista[i].isEmpty = EMPTY;
+	    }
+   	}
+	return retorno;
+}
+
+
+int BuscarPrimerEspacioLibreTracking (Tracking * lista,int len)
+{
+	  int i;
+	  int retorno=-1;
+
+	  if(lista != NULL && len > 0)
+	  {
+	  for (i = 0; i < len; i++)
+	    {
+		 if (lista[i].isEmpty == EMPTY)
+		{
+		  retorno = i;
+		  break;
+		}
+	    }
+	  }
+	  return retorno;
+}
+
+int altaTracking(Tracking * lista , int len, int idProducto , int idUsuario)
+{
+	int indice;
+	Tracking auxTracking;
+ 	if(lista != NULL && len > 0)
+ 	{
+      indice=BuscarPrimerEspacioLibreTracking(lista, len);
+      if(indice!=-1)
+      {
+    	  auxTracking = ObtenerID();
+      }
+
+
+ 	}
+
+}
+
+static int ObtenerID(void);
+
+
+static int ObtenerID(void) {
+
+	static int idIncremental = 1;
+	return idIncremental++;
+}

@@ -1,0 +1,21 @@
+/*
+ * Array_Tracking.h
+ *
+ *  Created on: 14 may. 2022
+ *      Author: Juan
+ */
+
+#ifndef ARRAY_TRACKING_H_
+#define ARRAY_TRACKING_H_
+
+typedef struct{
+	int idTracking;
+	int idPoducto;
+	short int isEmpty;
+
+	int cantidad;
+	int distanciaKM;
+	long int horaLlegada;
+}Tracking;
+
+#endif /* ARRAY_TRACKING_H_ */

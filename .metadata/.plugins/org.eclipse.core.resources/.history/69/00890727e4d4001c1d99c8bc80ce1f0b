@@ -1,0 +1,57 @@
+/*
+ ============================================================================
+ Name        : Primer.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <string.h>
+#include "Array_Usuario.h"
+#include "Input.h"
+#include "MenuOpciones.h"
+#define CANTIDADDEUSUARIOS 1000
+
+
+int main(void) {
+	setbuf (stdout, NULL);
+
+	int opcionMenuIngreso;
+
+
+	Usuario Usuarios[CANTIDADDEUSUARIOS]=
+	{
+			{1,FULL,2,"MANUEL_LP_18@HOTMAIL.COM","ELIZALDE 560","Paquito18",1870},
+			{2,FULL,1,"LOLA_2@HOTMAIL.COM","9 DE JULIO 123","LOLA123",1242},
+			{3,FULL,1,"ISABEL-192@HOTMAIL.COM","LAMBARE 323","Esperanza123",1735}
+
+	};
+
+	if(menuIngreso(&opcionMenuIngreso)==1)
+	{
+		while(opcionMenuIngreso!=0)
+		{
+			if(opcionMenuIngreso==1)
+			{
+				ingresarComoUsuarioOAdmin(Usuarios , CANTIDADDEUSUARIOS );
+				menuIngreso(&opcionMenuIngreso);
+			}
+			if(opcionMenuIngreso==2)
+			{
+				registrarNuevoUsuario(Usuarios, CANTIDADDEUSUARIOS);
+				menuIngreso(&opcionMenuIngreso);
+			}
+		}
+
+	}
+
+
+
+	return EXIT_SUCCESS;
+
+}

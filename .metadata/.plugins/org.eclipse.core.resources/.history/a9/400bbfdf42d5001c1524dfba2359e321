@@ -1,0 +1,27 @@
+/*
+ * Array_Tracking.c
+ *
+ *  Created on: 14 may. 2022
+ *      Author: Juan
+ *
+ */
+
+#include "Array_Tracking.h"
+
+
+
+int initTracking( Tracking *  lista,int len)
+{
+   	int retorno = -1;
+    int i;
+
+   	if(lista != NULL && len > 0)
+   	{
+   	 retorno=0;
+	 for ( i = 0; i < len; i++)
+	    {
+	     lista[i].isEmpty = EMPTY;
+	    }
+   	}
+	return retorno;
+}

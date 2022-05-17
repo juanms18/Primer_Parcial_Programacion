@@ -1,0 +1,108 @@
+/*
+ * Array_Tracking.c
+ *
+ *  Created on: 14 may. 2022
+ *      Author: Juan
+ *
+ */
+
+#include "Array_Tracking.h"
+
+
+static int ObtenerIDTracking(void);
+
+
+static int ObtenerIDTracking(void) {
+
+	static int idIncremental = 1;
+	return idIncremental++;
+}
+
+
+int initTracking( Tracking *  lista,int len)
+{
+   	int retorno = -1;
+    int i;
+
+   	if(lista != NULL && len > 0)
+   	{
+   	 retorno=0;
+	 for ( i = 0; i < len; i++)
+	    {
+	     lista[i].isEmpty = EMPTY;
+	    }
+   	}
+	return retorno;
+}
+
+
+int BuscarPrimerEspacioLibreTracking (Tracking * lista,int len)
+{
+	  int i;
+	  int retorno=-1;
+
+	  if(lista != NULL && len > 0)
+	  {
+	  for (i = 0; i < len; i++)
+	    {
+		 if (lista[i].isEmpty == EMPTY)
+		{
+		  retorno = i;
+		  break;
+		}
+	    }
+	  }
+	  return retorno;
+}
+
+int altaTracking(Tracking * lista , int len, int idProducto , int idUsuario , int cantidadComprada , int km ,int long horaLlegada)
+{
+	int indice;
+	int retorno=0;
+	Tracking auxTracking;
+	if(lista != NULL && len > 0)
+	{
+		indice=BuscarPrimerEspacioLibreTracking(lista, len);
+		if(indice!=-1)
+		{
+			auxTracking.idTracking = ObtenerIDTracking();
+			auxTracking.idPoducto = idProducto;
+			auxTracking.isEmpty = ENVIAJE;
+			auxTracking.cantidad = cantidadComprada;
+			auxTracking.distanciaKM=km;
+			auxTracking.horaLlegada=horaLlegada;
+			auxTracking.idUsusario=idUsuario;
+			lista[indice]= auxTracking;
+			printf("Tracking dado de alta correctamente!!El numero de ID asignado es:%d\n",lista[indice].idTracking);
+			printf("El numero de ID asignado es usuraior:%d\n",lista[indice].idUsusario);
+			printf("El numero de ID asignado esprdicdas:%d\n",lista[indice].idPoducto);
+			retorno=1;
+
+		}
+
+ 	}
+return retorno;
+}
+
+int buscarTrackigPorID(Tracking * listaTracking , int lenTracking)
+{
+	int retorno=-1;
+	int idSeleccionado;
+	int i;
+	if (listaTracking != NULL && lenTracking > 0)
+	{
+		getInt(&idSeleccionado, "Seleccione el ID del producto deseado\n", "ERROR!! Dato ingresado desconocido!\n",100, 10000, 3);
+
+		for (i = 0; i < len; i++)
+		{
+			if (listaTracking[i].idTracking == idSeleccionado && listaTracking[i].isEmpty == ENVIAJE)
+			{
+				retorno=i;
+				break;
+			}
+
+		}
+
+	}
+	return retorno;
+}

@@ -1,0 +1,16 @@
+/*
+ * MenuOpciones.h
+ *
+ *  Created on: 15 may. 2022
+ *      Author: Juan
+ */
+
+#ifndef MENUOPCIONES_H_
+#define MENUOPCIONES_H_
+#include "Array_Usuario.h"
+#include"Input.h"
+
+int menuIngreso(int * opcionIngresada);
+
+
+#endif /* MENUOPCIONES_H_ */

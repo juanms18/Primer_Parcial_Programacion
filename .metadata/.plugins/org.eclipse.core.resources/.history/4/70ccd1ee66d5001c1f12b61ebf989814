@@ -1,0 +1,126 @@
+/*
+ * Array_Tracking.c
+ *
+ *  Created on: 14 may. 2022
+ *      Author: Juan
+ *
+ */
+
+#include "Array_Tracking.h"
+
+static int ObtenerIDTracking(void);
+
+
+static int ObtenerIDTracking(void) {
+
+	static int idIncremental = 1;
+	return idIncremental++;
+}
+
+
+int initTracking( Tracking *  lista,int len)
+{
+   	int retorno = -1;
+    int i;
+
+   	if(lista != NULL && len > 0)
+   	{
+   	 retorno=0;
+	 for ( i = 0; i < len; i++)
+	    {
+	     lista[i].isEmpty = EMPTY;
+	    }
+   	}
+	return retorno;
+}
+
+
+int BuscarPrimerEspacioLibreTracking (Tracking * lista,int len)
+{
+	  int i;
+	  int retorno=-1;
+
+	  if(lista != NULL && len > 0)
+	  {
+	  for (i = 0; i < len; i++)
+	    {
+		 if (lista[i].isEmpty == EMPTY)
+		{
+		  retorno = i;
+		  break;
+		}
+	    }
+	  }
+	  return retorno;
+}
+
+int altaTracking(Tracking * lista , int len, int idProducto , int idUsuario, int cantidadComprada , int km)
+{
+	int indice;
+	Tracking auxTracking;
+ 	if(lista != NULL && len > 0)
+ 	{
+      indice=BuscarPrimerEspacioLibreTracking(lista, len);
+      if(indice!=-1)
+      {
+    	  auxTracking.idTracking = ObtenerIDTracking();
+    	  auxTracking.idPoducto = idProducto;
+    	  auxTracking.isEmpty = FULL;
+    	  auxTracking.cantidad = cantidadComprada;
+
+
+
+      }
+
+
+ 	}
+
+}
+
+int calculoKM(Usuario * listaUsuario , int lenUsuario , Producto * listaProducto , int lenProducto , Tracking * listaTracking , int lenTracking , int indiceUsuario)
+{
+	int indiceUsuario;
+	int i;
+	int retorno=-1;
+	int distancia1=20;
+	int distancia2=30;
+	int distancia3=50;
+	int distancia4=80;
+	int distancia5=150;
+
+	if(list != NULL && len > 0 && listaUsuario != NULL && lenUsuario > 0)
+	{
+		for(i=0 ; i < lenUsuario ; i++)
+		{
+			if(list[indiceProducto].idUsuario==listaUsuario[i].idUsuario)
+			{
+				retorno=i;
+				if(listaUsuario[i].codPostal > 0 && listaUsuario[i].codPostal <= 1000)
+				{
+					*km = distancia1;
+				}
+				if(listaUsuario[i].codPostal > 1000 && listaUsuario[i].codPostal <= 3000)
+				{
+					*km = distancia2;
+				}
+				if(listaUsuario[i].codPostal > 3000 && listaUsuario[i].codPostal <= 5000)
+				{
+					*km = distancia3;
+				}
+				if(listaUsuario[i].codPostal > 5000 && listaUsuario[i].codPostal <= 8000)
+				{
+					*km = distancia4;
+				}
+				if(listaUsuario[i].codPostal > 8000 && listaUsuario[i].codPostal <= 9999)
+				{
+					*km = distancia5;
+				}
+				retorno = i;
+
+			}
+		}
+	}
+	return retorno;
+}
+
+
